@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+	<link rel="stylesheet" type="text/css" href="styles/form.css">
+</head>
+<body>
+	<div class="test1">
+	<fieldset>
+		<legend>你的联系方式</legend>
+		<p><label for="name">Name:<em class="required">(必要)</em></label>
+		<input name="name" id="name" type="text"/></p>
+		<p><label for="email">Email Address:<em class="required">(必要)</em></label>
+		<input name="email" id="email" type="text"/></p>
+		<p><label for="web_address">Web Address<em class="required">(必要)</em></label>
+		<input name="web_address" id="web_address" type="text"/></p>
+	</fieldset>
+		<fieldset>
+			<legend>建议与评论</legend>
+			<p><label for="text">Message:<em class="required">（必要）</em></label>
+			<textarea id="text" name="text" cols="60" rows="10"></textarea></p>
+		</fieldset>
+		<fieldset class="test2">
+			<legend>保存修改</legend>
+			<input class="radio" type="radio" name="yes" id="yes" value="yes" />
+			<label for="yes">Yes</label>
+			<input class="radio" type="radio" name="no" id="no" value="no" checked="checked" />
+			<label for="no">No</label>
+		</fieldset>
+		<p>注意：单选按钮和复选框并不同于文本区域和文本控件，它不会把标签放在他们上面，而是放在右边。</p>
+	</div>
+
+<fieldset class="test3">
+	<legend>个人信息</legend>
+	<p>
+		<label for="birthPlace">出生地</label>
+	<select id="birthPlace" name="birthPlace">
+		<option value="江西">江西</option>
+		<option value="湖南">湖南</option>
+		<option value="福建">福建</option>
+		<option value="重庆">重庆</option></select>
+	</p>
+	<p>
+		<label for="birthDate">出生日期</label>
+		<input type="text" name="birthDate" id="birthDate" value="02" />
+		<label for="birthMonth">出生月份</label>
+		<select>
+			<option value="1">Jan</option>
+			<option value="2">Feb</option>
+			<option value="3">Mar</option>
+		</select>
+		<label for="birthYear">出生年份</label>
+		<input type="text" name="birthYear" id="birthYear" value="1980"/>
+
+	
+<fieldset class="test4">
+<h4>最喜欢的颜色:</h4>
+<div>
+	<p><input type="checkbox" class="checkbox" id="red" name="red" value="red">
+	<label>red</label> </p>
+	<p><input type="checkbox" class="checkbox" id="red" name="red" value="red">
+	<label>red</label> </p>
+	<p><input type="checkbox" class="checkbox" id="red" name="red" value="red">
+	<label>red</label> </p>
+	<p><input type="checkbox" class="checkbox" id="red" name="red" value="red">
+	<label>red</label></p> </div>
+<div>
+	<p><input type="checkbox" class="checkbox" id="red" name="red" value="red">
+	<label>red</label> </p>
+	<p><input type="checkbox" class="checkbox" id="red" name="red" value="red">
+	<label>red</label> </p>
+	<p><input type="checkbox" class="checkbox" id="red" name="red" value="red">
+	<label>red</label> </p>
+	<p><input type="checkbox" class="checkbox" id="red" name="red" value="red">
+	<label>red</label></p> </div>
+
+</fieldset>
+</fieldset>
+
+	
+	
+</body>
+</html>

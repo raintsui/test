@@ -1,0 +1,55 @@
+.test1 fieldset{
+	background-color: #f8f8f8;
+	margin: 1em auto;
+	padding: 1em;
+	border: 1px solid #ccc;
+	width:500px;
+}
+.test1 legend{
+	font-weight: bold;
+} 
+.test1 label{
+	display: block;
+}
+.required{
+	font-size: 0.5em;
+}
+input[type="text"]{
+	width:200px;
+}
+input:focus,textarea:focus{
+	background-color: #ffc;
+}
+input .radio{
+	float: left;
+	margin-right: 1em;
+}
+input.radio,input.checked,input.submit{
+	width:auto;
+}
+.test2 label{
+	display: inline;
+}
+.test3 input{
+	width:35px;
+}
+.test3 label{
+	display: inline;
+}
+.test3
+fieldset.test4{
+	border:0;
+	margin:0;
+	padding: 0;
+	
+}
+.test4 h4{
+	font-weight: normal;
+	float: left;
+	margin-right: 20px;
+}
+.test4 div{
+	float: left;
+	margin-top: 0.5em;
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table</title>
+	<link rel="stylesheet" type="text/css" href="styles/table.css" />
+</head>
+<body>
+	<table cellspacing="0" id="artistList" summary="15名作家和他们最出名的艺术作品">
+	<caption>15名作家及其艺术品</caption>
+	<colgroup>
+		<col id="artistCol" />
+		<col id="artworkCol" />
+		<col id="price" />
+	</colgroup>
+	<thead>
+		<tr>
+			<th scope="col">artists'name</th>
+			<th scope="col">artwork</th>
+			<th scope="col">price</th>
+		</tr></thead>
+	<tbody>
+		<tr class="odd">
+			<td>Abllie</td>
+			<td>The Laugh</td>
+			<td>$12222</td>
+		</tr>
+		<tr class="odd">
+			<td>Butte</td>
+			<td>The Gate</td>
+			<td>$14555</td>
+		</tr>
+		<tr class="odd">
+			<td>Celle</td>
+			<td>The Crying</td>
+			<td>$15662</td>
+		</tr>
+		<tr class="odd">
+			<td>Dattu</td>
+			<td>The Tree</td>
+			<td>$22244</td>
+		</tr>
+		</tbody>
+		<tfoot></tfoot>		
+</table>
+<p>1.summary属性可用于表格标签，用来描述表格内容，与image的alt相似。</p>
+<p>2.caption标题</p>
+<p>3.老式但可靠cellspacing控制单元格间距，border-collapse:collapse;也是控制单元格间距</p>
+</body>
+</html>

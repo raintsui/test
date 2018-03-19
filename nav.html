@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>navigation</title>
+	<link href="styles/nav.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="home">
+	<div class="navA con">
+		<h3>1.基本列表样式（不知为何li,p标签中显示不了背景图像）</h3>
+		<hr/>
+		<ul><li>handle</li>
+			<li>contribute</li>
+			<li>determin</li>
+			<li>guarantee</li>
+			<li>express</li>
+			<li>invent</li></ul>
+		<p>list-style-image添加定制的列表符号，但是控制位置不过精确，可用背景图像加padding-left(firefox/Safari)/margin-left(IE/Opera)</p>
+	</div>
+	<div class="navB con">
+		<h3>2.垂直导航条</h3>
+		<ul><li class="first"><a href="#">HOME</a></li>
+			<li><a href="#">ABOUT</a></li>
+			<li><a href="#">SERVICES</a></li>
+			<li><a href="#">OURWORK</a></li>
+			<li><a href="#">NEWS</a></li>
+			<li><a href="#">CONTECT</a></li></ul>
+			<p>注意：需要注意边框线会重叠造成的影响</p></div>
+	<div class="navB con">
+		<h3>3.在导航条中突出显示当前页面</h3>
+		<ul id=mainNav><li class="home first" ><a href="#">HOME</a></li>
+			<li class="about"><a href="#">ABOUT</a></li>
+			<li class="services"><a href="#">SERVICES</a></li>
+			<li class="ourwork"><a href="#">OURWORK</a></li>
+			<li class="news"><a href="#">NEWS</a></li>
+			<li class="contect"><a href="#">CONTECT</a></li></ul>
+			<p>1.给页面body设置ID 2.给导航条ul设置ID 3.给不同item设置类名 4.利用前面三个选择器形成复合选择器来给定特殊突出显示当前页面样式</p></div>
+	<div class="navD con">
+		<h3>4.水平导航条</h3>
+		<ul><li class="first" ><a href="#">HOME</a></li>
+			<li><a href="#">ABOUT</a></li>
+			<li><a href="#">SERVICES</a></li>
+			<li><a href="#">OURWORK</a></li>
+			<li><a href="#">NEWS</a></li>
+			<li><a href="#">CONTECT</a></li></ul>
+			<p class="clear">有两种方法，给列表项：1.设置成行内元素inline,但可能有缺陷 2.设置浮动(需要注意“包围浮动元素”的特点，见代码内部）</p></div>
+			<div class="clear"></div>
+	<div id="pic">
+		<h3>css图像映射</h3>
+		<img src="images/A07.jpg" alt="野村周人,山崎贤人,桐谷美玲,三浦翔平" />
+		<ul><li class="ye"><a href="#">野村周人</a></li>
+			<li class="shan"><a href="#">山崎贤人</a></li>
+			<li class="tong"><a href="#">桐谷美玲</a></li>
+			<li class="san"><a href="#">三浦翔平</a></li></ul>
+		<p>利用列表，采用绝对定位，链接中的文字负文本缩进影藏链接文本。</p>
+		<p>设置不同效果，可利用span设置边框或是显示跟随文字说明(用绝对定位）。 </p></div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>links</title>
+	<link href="links.css" rel="stylesheet" type="text/css" />
+	<style>
+.conLink{
+	border:1px solid #000;
+	float:left;
+	padding:0px 10px;
+}
+.link1 a:link, a:visited{
+	text-decoration: none;
+	border-bottom: 1px dotted #000;
+}
+.link1 a:hover, a:active{
+	border-bottom-style: solid;
+}
+.link2 a:link, a:visited{
+	text-decoration: none;
+	font-weight:bold;
+}
+.link2 a:hover, a:active{
+	text-decoration: underline;
+}
+.link3 a:link, a:visited{
+	text-decoration: none;
+	background: url(images/A01.jpg) repeat-x left bottom;
+	padding-bottom: 5px;
+}
+.link3 a:hover, a:active{
+	background: url(images/A02.jpg) repeat-x left bottom;
+	display: block;
+}
+.link6 a:link{
+	display: block;
+	width:120px;
+	height:30px;
+	line-height: 30px;/*这里设定为块级元素和高宽可使按钮整个区域都具有链接作用。*/
+	text-decoration: none;
+	background: pink url(images/A02.jpg) no-repeat left center;
+	text-indent: 10px;
+	
+}
+.link6 a:visited{
+	background-position: right center;	
+}
+.link6 a:hover, a:active{
+	background-color: powderblue;
+}
+.external{
+	background: url(images/A03.png) no-repeat right top;
+	padding-right:15px;
+	}
+a[href$=".pdf"]{
+	background: url(images/A04.png) no-repeat right top;
+	padding-right:15px;
+}
+a[href$=".doc"]{
+	background: url(images/A05.png) no-repeat right top;
+	padding-right:15px;
+}
+
+    </style>
+
+</head>
+<body>
+
+<div class="link1 conLink">
+	<h3>1.边框线代替下划线</h3>
+	<a href="#text1" >SKIP TO THE TEXT 01</a>
+	<p><a name="text1">text01</a></p>
+</div>
+<div class="link2 conLink">
+	<h3>2.下划线</h3>
+	<a href="#text1" >SKIP TO THE TEXT 01</a>
+	<p><a name="text1">text01</a></p>
+</div>
+<div class="link3 conLink">
+	<h3>3.下划线图像</h3>
+	<a href="#text1" >SKIP TO THE TEXT 01</a>
+	<p><a name="text1">text01</a></p>
+</div>
+<div class=" conLink">
+	<h3>4.突出显示不同类型的链接(图片太大看不出来）</h3>
+	<p>如站点外的页面图标区别，邮件图标区别，即时消息图标等。</p>
+	<p>处使用类选择器，更好使用属性选择器[att^=http]（大多数浏览器会支持，除老式浏览器</p>
+	<a href="https://blog.codepen.io/" class="external" >SKIP TO THE OTHER SITES</a>	
+</div>
+<div class=" conLink">
+	<h3>5.突出显示可下载的文档和提要</h3>
+	<p>属性选择器寻找识别特定值（比如.pdf .doc结尾的属性）  a[href$=".doc"] a[href$=".pdf"] a[href$=".rss"] a[href$=".rdf"]</p>
+	<p>再利用第四点利用图标突出不同类型链接</p>
+	<a href="https://blog.codepen.io/" class="external" >SKIP TO THE OTHER SITES</a>	
+	<a href="doc/list1.pdf" class="external" >download the document.</a>
+	<a href="doc/list2.doc" class="external" >download the document.</a>
+	<p>所有这些技术都是有助于改进用户在站点上的浏览体验。通过提醒用户注意离站链接或可下载的文档，让用户明确了解点解链接后的情况。</p>
+	<p>IE6和更低的版本不支持属性浏览器，使用JS和DOM实现相似功能和效果。</p>
+</div>
+<div class="link6 conLink">
+	<h3>6.创建按钮和翻转</h3>
+	<p>具有颜色的按钮翻转——具有图像的翻转——图像设置在父元素中，改变伪链接不同状态下的位置来呈现翻转效果—</p>
+	<p>给访问过得链接添加标志</p>
+	<p><a href="https://blog.codepen.io/" target="_blank"> codePan</a></p>
+	<p>给链接旁添加小方框解释是否已访问，参与绝对定位。（！！！不过这种技术在IE5.x中无效，但是只要给添加一条font-size:100%就可以解决，但是safari中还是没有解决方法</p>
+</div>
+
+
+
+</body>
+</html>

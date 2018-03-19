@@ -1,0 +1,124 @@
+.con{
+	float:left;
+	width:600px;
+	border-left: 1px solid #000;
+	padding-left: 20px;
+	margin: 5px 5px;
+}
+.con ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.clear{
+	clear:both;
+}
+.navA ul li{
+	/*line-height:200%;*/
+	display: block;
+	height: 25px;
+	width: 40px;
+	padding-left: 15px;
+	/*background-color: #666;*/
+	background-repeat: no-repeat;
+	background-image:url(../images/A06.png);
+	background-position: 0 0;
+}
+.navB ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+.navB a {
+	display: block;
+	width: 200px;
+	height: 39px;
+	line-height: 39px;
+	color: #000;
+	text-decoration: none;
+	background: powderblue url(../images/A06.png) no-repeat left center;
+	text-indent:15px;
+	border:1px solid #000;
+	border-top: 0px;
+	cursor: pointer;
+}
+.navB .first a{
+	border-top:1px solid #000;
+}
+.navB a:hover{
+	color: #fff;
+	background-position: right bottom;
+}
+#home #mainNav .home a,#about #mainNav .about a,
+#services #mainNav .services a,#ourwork #mainNav .ourwork a,
+#news #mainNav .news a,#contect #mainNav .contect a{
+	background-position: right bottom;
+	color:#fff;
+	curson:default;
+}
+.navD ul{
+	margin:0;
+	padding-left: 0;
+	list-style: none;
+	background:url(../images/A01.jpg) repeat-x left bottom;
+	
+	float: left;
+}
+/*.navD li{
+	float: left;
+	padding-right: 5px;
+}*/
+/*直接这样设置父元素ul实际上是没有包含内容的，会收缩，显示不出背景图像。需要考虑到“包含浮动”的方法
+1.添加进行清理（clear)的元素 2.父元素进行浮动。*/
+.navD li{
+	float: left;
+	padding-right: 15px;
+	line-height: 2.1em;
+	text-decoration: none;
+	color:#fff;
+}
+.navD a:hover{
+	text-decoration: underline;
+	color: #000;
+}
+#pic{
+	width:600px;
+	height:400px;
+	position:relative;
+}
+#pic ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#pic a{
+	position: absolute;
+	width: 30px;
+	height:40px;
+	text-indent: -1000em;
+
+}
+#pic .ye a{
+	top:80px;
+	left:97px;	
+}
+#pic .shan a{
+	top:110px;
+	left:150px;
+}
+#pic .tong a{
+	top:115px;
+	left:215px;	
+}
+#pic .san a{
+	top:108px;
+	left:280px;
+}
+#pic a:hover{
+	border:0.1em dashed #fff;
+	text-indent: -0.1em;
+	color:#fff;
+	font-size: 0.5em;
+	text-decoration: none;
+}

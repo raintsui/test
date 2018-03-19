@@ -1,0 +1,36 @@
+table{
+	border-collapse: collapse;/*如果可能，边框会合并为一个单一的边框。会忽略 border-spacing 和 empty-cells 属性。*/
+	width:30em;
+	border: 1px solid #666;
+}
+th,td{
+	padding: 0.1em 1em;
+}
+caption{
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 1em 0;
+}
+col{
+	border-right:1px solid #666;
+}/*支持这个方法的浏览器较少*/
+thead{
+	/*background:url(../images/A01.jpg) repeat-x left top;
+	*/
+    border-bottom: 1px solid #666;
+}
+th{
+	font-weight: normal;
+	text-align: left;
+}
+.odd{
+	background-color: #edf5ff;
+}
+tr:hover{
+	background-color: #3d80df;
+	color: #fff;
+}
+th:hover{
+	background-color: transparent;
+	color: inherit;
+}
