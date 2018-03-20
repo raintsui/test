@@ -1,0 +1,44 @@
+#inputstyle{
+	margin: 0 auto;
+	width: 660px;
+	background: #f6f6e9;
+	border-radius: 10px;
+	border:2px #ccc;
+
+}
+h3{
+	text-align: center;
+	margin-top: 10px;
+}
+h3 i{
+	font-size: 0.8em;
+}
+h4{
+	margin-left: 15px;
+}
+.flleft{
+	float: left;
+}
+.flright{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+.inputAddOn{
+	width: 300px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 15px;
+	margin-bottom: 20px;
+
+}
+.inputAO-field{
+	flex: 1;
+}
+.inputAO-item{
+	background: #d2ebcd;
+	padding: 5px;
+	border:0.1px solid #000;
+	font: 1em Arial,sans-serif;
+}

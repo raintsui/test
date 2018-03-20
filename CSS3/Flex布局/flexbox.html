@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>容器的属性</title>
+	<style type="text/css">
+	#box{
+	width: 840px;
+	margin: 0 auto;
+	border-left: 0.5px solid #ccc;
+	border-top: 0.5px solid #ccc;
+	border-right: 0.5px solid #ccc;
+	box-shadow: #ccc 5px 5px;
+	padding: 20px 60px;
+	}
+	#flex_direc01,#flex_direc02,#flex_direc03,#flex_direc04,#justify_content01,#justify_content02,#justify_content03,#justify_content04,#justify_content05,#align_items01,#align_items02,#align_items03,#align_items04,#align_items05,#flex-flow01,#wrap01,#wrap02,#wrap03,#align-content01,#align-content02,#align-content03,#align-content04,#align-content05,#align-content06{
+		background: pink;
+		margin: 5px 0;
+		display: flex;
+		display: -webkit-flex;
+		}
+		#flex_direc01{
+			flex-direction: row;
+			width: 400px;
+			height: 100px;
+		}
+		#flex_direc02{
+			flex-direction:column;
+			width: 400px;
+			height:100px;
+		}
+		#flex_direc03{
+			flex-direction:row-reverse;
+			width: 400px;
+			height:100px;
+		}
+		
+		#flex_direc04{
+			flex-direction: column-reverse;
+			width: 400px;
+			height: 100px;
+		}
+		#wrap01,#wrap02,#wrap03{
+			width: 250px;
+		}
+		#wrap01{
+			flex-wrap: nowrap;
+		}
+		#wrap02{
+			flex-wrap: wrap;
+		}
+		#wrap03{
+			flex-wrap: wrap-reverse;
+		}
+		
+		#justify_content01{
+			justify-content: flex-start;
+			height: 30px;
+			width: 600px;
+		}
+		
+		#justify_content02{
+			justify-content: flex-end;
+			height: 30px;
+			width: 600px;
+		}
+		#justify_content03{
+			justify-content: center;
+			height: 30px;
+			width: 600px;
+		}
+		#justify_content04{
+			justify-content: space-between;
+			height: 30px;
+			width: 600px;
+		}
+		#justify_content05{
+			justify-content: space-around;
+			height: 30px;
+			width: 600px;
+		}
+		.one{
+			width: 30px;
+			height: 20px;
+			margin: 2px 3px;
+			background: #499;
+		}
+	    .two{
+			width: 60px;
+			height: 30px;
+			margin: 2px 3px;
+			background: #499;
+		}
+		.three{
+			width: 124px;
+			height: 20px;
+			margin: 2px 3px;
+			background: #499;
+		}
+		.four{
+			width: 90px;
+			margin: 2px 3px;
+			background: #499;
+
+		}
+		#align_items01,#align_items02,#align_items03,#align_items04,#align_items05{
+			height: 100px;;
+		    width: 500px;
+		}
+		
+		#align_items01{
+			align-items: flex-start;		
+		}
+		#align_items02{
+			align-items: flex-end;
+		}
+		#align_items03{
+			align-items: center;
+		}
+		#align_items04{
+			align-items: baseline;
+		}
+		#align_items05{
+			align-items:stretch;/*默认情况下充满整个容器，在项目没有设置高度的时候。*/
+		}
+
+		#align-content01,#align-content02,#align-content03,#align-content04,#align-content05,#align-content06{
+			height: 200px;
+			width: 200px;
+			flex-flow: row wrap;
+			
+		}
+
+		#align-content01{
+			align-content: flex-start;
+		}
+		#align-content02{
+			align-content: flex-end;
+		}
+		
+		#align-content03{
+			align-content: center;
+		}
+		#align-content04{
+			align-content: space-between;
+		}
+		#align-content05{
+			align-content: space-around;
+		}
+		#align-content06{
+			align-content: stretch;
+		}
+		a {
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		.float{
+			float: left;
+			width: 400px;
+			margin: 0 5px;
+		}
+
+
+
+	</style>
+</head>
+<body>
+<div id='box'>
+	<a href="flexitems.html"><i>【（二）项目的属性】</i></a>
+	<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html"><i>【参考文章】</i></a>
+<div id='direc'>
+	<h3>（一）容器的属性：</h3>
+	<ol>
+		<li><strong>flex-direction（项目排列顺序）：</strong>row|row-reverse|column|column-reverse</li>
+		<li><strong>flex-wrap（是否换行）：</strong>nowrap|wrap|wrap-reverse;</li>
+		<li><strong>flex-flow（上面两个属性简写）：</strong> flex-direction || flex-wrap</li>
+		<li><strong>justify-content（主轴上的对齐方式）：</strong>flex-start | flex-end | center | space-between | space-around;</li>
+		<li><strong>align-items（交叉轴上的对齐方式）：</strong>flex-start | flex-end | center | baseline | stretch;</li>
+		<li><strong>align-content（多根轴线的对齐方式）：</strong>flex-start | flex-end | center | space-between | space-around | stretch;</li>
+	</ol>
+	<h4>1.flex-direction属性：</h4>
+	<i>（1）row;主轴方向，起点在左端；</i>
+	<div id='flex_direc01'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+	</div>
+	<i>（2）column;交叉轴方向，起点在顶端；</i>
+	<div id='flex_direc02'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+	</div>
+	<i>（3）row-reverse;主轴方向，起点在右端；</i>
+	<div id='flex_direc03'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+	</div>
+	<i>（4）column-reverse;交叉轴方向，起点在底端；</i>
+	<div id='flex_direc04'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+	</div>
+</div>
+<div id='wrap'>
+	<h4>2.flex-wrap属性：</h4>
+
+   <div class='float'>
+	<i>（1）nowrap默认不换行</i>
+	<div id="wrap01">
+		 <div class='one'>1</div>
+		<div class='two'>2</div>
+		<div class='three'>3</div>
+		<div class='one'>4</div>
+		<div class='two'>5</div>
+		<div class='three'>6</div>
+    </div></div>
+     <div class='float'>
+    <i>（2）wrap换行，第一行在上方</i>
+    <div id="wrap02">
+		 <div class='one'>1</div>
+		<div class='two'>2</div>
+		<div class='three'>3</div>
+		<div class='one'>4</div>
+		<div class='two'>5</div>
+		<div class='three'>6</div>
+    </div> </div>
+      <div class='float'>
+     <i>（3）wrap-reverse（换行，第一行在下方）</i>
+    <div id="wrap03">
+		 <div class='one'>1</div>
+		<div class='two'>2</div>
+		<div class='three'>3</div>
+		<div class='one'>4</div>
+		<div class='two'>5</div>
+		<div class='three'>6</div>
+    </div></div>
+</div>
+<span style="clear: both;"></span>
+<div id="flex-flow" style="clear: both;">
+	<h4>3.flex-flow属性：设置为row wrap时</h4>
+<div id="flex-flow01" style="flex-flow:row wrap;width:200px;">
+	    <div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+</div>
+</div>
+<div id='justify'>
+<h4>4.justify-content属性:</h4>
+    <i>（1）flex-start(左对齐）</i>
+	<div id='justify_content01'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+	</div>
+	<i>（2）flex-end（右对齐）</i>
+	<div id='justify_content02'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+	</div>
+	<i>（3）center（居中）</i>
+	<div id='justify_content03'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+	</div>
+	<i>（4）space-between（两端对齐，项目之间间隔都相等）</i>
+	<div id='justify_content04'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+	</div>
+	<i>（5）space-around（每个项目两侧间隔相等，所以项目之间间隔等于与边框间隔两倍）</i>
+	<div id='justify_content05'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+	</div>
+</div>
+<div id='align_items'>
+	<h4>5.align-items属性：</h4>
+	<i>（5）flex-start（交叉轴起点对齐）</i>
+	<div id='align_items01'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+	</div>
+	<i>（2）flex-end（终点对齐）</i>
+	<div id='align_items02'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+	</div>
+	<i>（3）center（中点对齐）</i>
+	<div id='align_items03'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+	</div>
+	<i>（4）baseline（项目的第一行文字的基线对齐）</i>
+	<div id='align_items04'>
+		<div class='one'>45ffd</div>
+		<div class='two'>123</div>
+		<div class='three'>文字基线对齐</div>
+	</div>
+	<i>（5）stretch（默认值）（如果为设置高度或设置为auto，将占满容器整个高度）</i>
+	<div id='align_items05'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+		<div class='four'></div>
+		<div class='four'></div>
+		<div class='four'></div>
+	</div>
+</div>
+<div id='align-content'>
+	
+	<h4>6.align-content属性：</h4>
+	 <div class='float'>
+	<i>（1）flex-start（交叉轴起点对齐）</i>
+	<div id='align-content01'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+    </div></div>
+     <div class='float'>
+    <i>（2）flex-end：与交叉轴的终点对齐。</i>
+	<div id='align-content02'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+    </div></div>
+     <div class='float'>
+    <i>（3）center：与交叉轴的中点对齐。</i>
+	<div id='align-content03'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+    </div></div>
+    <div class='float'>
+    <i>（4）space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</i>
+	<div id='align-content04'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+    </div></div>
+    <div class='float'>
+    <i>（5）space-around：每根轴线两侧的间隔都相等。<br/>所以，轴线之间的间隔比轴线与边框的间隔大一倍。</i>
+	<div id='align-content05'>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+		<div class='one'></div>
+		<div class='two'></div>
+		<div class='three'></div>
+    </div>
+    </div>
+    <div class='float'>
+    <i>（6）stretch（默认值）：轴线占满整个交叉轴。</i>
+	<div id='align-content06'>
+		<div style="width: 40px;background: #499;margin: 0 5px;"></div>
+		<div style="width: 20px;background: #499;margin: 0 5px;"></div>
+		<div style="width: 10px;background: #499;margin: 0 5px;"></div>
+		<div style="width: 30px;background: #499;margin: 0 5px;"></div>
+		<div style="width: 60px;background: #499;margin: 0 5px;"></div>
+		<div style="width: 20px;background: #499;margin: 0 5px;"></div>
+    </div>
+    </div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</body>
+</html>

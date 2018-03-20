@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网格布局</title>
+	<style type="text/css">
+	#box{
+		width: 400px;
+		border-radius: 10px;
+		border:1px solid #ccc;
+		margin: 0 auto;
+
+	}
+		.grid{
+			display: -moz-flex;
+			display: flex;
+			margin:10px;
+		}
+		.grid-ceil{
+			flex:1;
+			background-color: #ccc;
+			margin:0 5px;
+		}
+		p{
+			text-indent: 2em;
+		}
+	</style>
+</head>
+<body>
+<div id='box'>
+	<div class='grid'>
+		<div class='grid-ceil'>1/4</div>
+		<div class='grid-ceil'>1/4</div>
+		<div class='grid-ceil'>1/4</div>
+		<div class='grid-ceil'>1/4</div>
+	</div>
+	<div class='grid'>
+		<div class='grid-ceil'>1/2</div>
+		<div class='grid-ceil'>1/2</div>
+	</div>
+	<div class='grid'>
+		<div class='grid-ceil'>1/3</div>
+		<div class='grid-ceil'>1/3</div>
+		<div class='grid-ceil'>1/3</div>
+	</div>
+	<div class='grid'>
+		<div class='grid-ceil'><p>虽然Flexbox可以起到一定的补救作用，但是它只可以实现简单的一维布局，并不适用于复杂的二维布局(实际上 Flexbox 和 Grid 可以一起结合使用起到最佳效果)。网格是 CSS 第一次专门创建的模块，用来解决我们之前在制作网站时使用hacks处理布局问题。</p></div>
+		<div class='grid-ceil'><p>CSS Grid(网格) 布局使我们能够比以往任何时候都可以更灵活构建和控制自定义网格。 Grid(网格) 布局使我们能够将网页分成具有简单属性的行和列。它还能使我们在不改变任何HTML的情况下，使用 CSS 来定位和调整网格内的每个元素。它允许 HTML 纯粹作为内容的容器。HTML 结构不再受限于样式表现，比如不要为了实现某种布局而多次嵌套，现在这些都可以让 CSS 来完成。</p></div>
+	</div>
+</div>
+	
+</body>
+</html>

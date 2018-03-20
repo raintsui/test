@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>圣杯布局</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding:0;
+	}
+		.HollyGrail{
+			display: -moz-flex;
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+		}
+		header,footer{
+			height: 80px;
+			background: #0e9577;
+		}
+		
+		.HollyGrail-body{
+			flex: 1;
+			display: -moz-flex;
+			display: flex;
+			flex-wrap: nowrap;
+		}
+		.HollyGrail-content{
+			flex: 1;
+			background: #f1efb9;
+		}
+		.HollyGrail-nav,.HollyGrail-ads{
+            flex: 0 0 12em;
+            text-align: center;
+            vertical-align: middle;/*没有效果*/
+		}
+		.HollyGrail-nav{
+			background: #f2855e;
+		}
+		.HollyGrail-ads{
+			background: #d7eef2;
+		}
+/*如果是小屏幕，去干的三栏会自动变成垂直叠加*/
+@media(max-width:768px){
+	.HollyGrail-body{
+		flex-direction: column;
+		flex: 1;
+	}
+	.HollyGrail-nav,.HollyGrail-ads,.HollyGrail-content{
+		flex: auto;
+	}
+}
+
+	</style>
+
+</head>
+<body>
+	<div class='HollyGrail'>
+		<header></header>
+		<div class='HollyGrail-body'>
+			<div class="HollyGrail-nav">导航链接类</div>
+			<div class='HollyGrail-content'>主体内容</div>
+			<div class='HollyGrail-ads'>附加内容</div>
+		</div>
+		<footer></footer>
+	</div>
+</body>
+</html>

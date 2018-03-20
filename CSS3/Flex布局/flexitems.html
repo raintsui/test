@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>项目元素</title>
+	<style type="text/css">
+		#box{
+        	width: 900px;
+        	margin: 0 auto;
+        	border-left: 0.5px solid #ccc;
+        	border-top: 0.5px solid #ccc;
+        	border-right: 0.5px solid #ccc;
+        	box-shadow: #ccc 5px 5px;
+        	padding: 20px;
+        }
+		span{
+			background: #399;
+			height: 30px;
+			width: 20px;
+		}
+		i{
+			font-size: 12px;
+			font-size: normal;
+			
+		}
+		.od1{
+			width: 20px;
+		}
+		.od2{
+			width: 40px;
+			height: 30px;
+		}
+		.od3{
+			width: 40px;;
+
+		}
+		.od4{
+			height: 50px;
+		}
+		.od5{
+			width:90px;
+
+		}
+		#box1{
+			width: 600px;
+			height: 60px;
+			display: flex;
+			display: -webkit-flex;
+			flex-direction:row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: baseline;
+			background: pink;
+		}
+		#box1 .od6,#box1 .od7{
+			order:-1;
+		}
+		#box1 .od8{
+			order: -2;
+		}
+		#box1 .od1,#box1 .od2{
+			order: 1;
+		}
+		#box2{
+			margin: 10px 0 ;
+			width: 600px;
+			height: 100px;
+			display: flex;
+			display: -webkit-flex;
+			flex-direction:column;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
+			background: pink;
+		}
+		}
+		#box2 .od8{
+			order: -2;
+		}
+		#box2 .od1,#box2 .od2{
+			order: 1;
+		}
+		.box3{
+			margin: 10px 0 ;
+			width: 600px;
+			height: 100px;
+			display: flex;
+			display: -webkit-flex;
+			flex-direction:row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			background: pink;
+		}
+		#box4 .od1,#box4 .od2,#box4 .od3,#box4 .od4{
+			flex-grow: 1;
+			margin: 0 5px;
+
+
+		}
+		#box5 .od1{
+			flex-grow: 2;
+			margin: 0 5px;
+
+		}
+		#box5 .od2,#box5 .od3,#box5 .od4{
+			flex-grow: 1;
+			margin: 0 5px;
+		}
+		.box6{
+			margin: 10px 0 ;
+			width: 200px;
+			height: 50px;
+			display: flex;
+			flex-direction:row;
+			flex-wrap: nowrap;
+			background: pink;
+		}
+		.box6 .od2,.box6 .od5{
+			border:2px dashed #ccc;
+		}
+		#box7 .od2{
+			flex-shrink: 4;
+		}
+		#box7 .od5{
+			flex-shrink:0;
+		}
+		#box8 .od2{
+			flex-basis:200px;
+			border:2px dashed #ccc;
+		}
+		#box9 .od2{
+			flex:1 1 auto;
+			border:2px dashed #ccc;
+		}
+		#box10 .od2{
+			align-self: flex-end;
+			border:2px dashed #ccc;
+		}
+		a {
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		#box11 .od2{
+			flex:1;
+			border:2px dashed #ccc;
+		}
+
+		
+
+
+	</style>
+</head>
+<body>
+	<div id='box'>
+		<a href="flexbox.html"><i>【（一）容器的属性】</i></a>
+		<h3>（二）项目上的6个属性：</h3>
+		<ul>
+			<li>order</li>
+			<li>flex-grow</li>
+			<li>flex-shrink</li>
+			<li>flex-basis</li>
+			<li>flex</li>
+			<li>align-self</li>
+		</ul>
+
+
+<div>
+	<h4>1.order:(整数);<br/>
+		定义项目的排列顺序。数值越小，排列越靠前.默认为0。<br/></h4>
+<i>容器上设置的属性：justify-content: space-between;
+align-items: baseline;主轴上对齐，项目之间间隔相等;交叉轴上对齐，基于基准线对齐。</i>
+
+	<div id='box1'>			
+		<span class='od1'>1</span>
+		<span class='od2'>2</span>
+		<span class='od3'>0</span>
+		<span class='od4'>0</span>
+		<span class='od5'>0</span>
+		<span class='od6'>-1</span>
+		<span class='od7'>-1</span>
+		<span class='od8'>-2</span>
+	</div>
+
+	<i>容器上设置的属性：flex-direction:column;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;</i>
+	<div id='box2'>
+		<span class='od1'>1</span>
+		<span class='od2'>2</span>
+		<span class='od8'>-2</span>
+	</div>
+</div>
+<div>
+	<h4>2.flex-grow:number;<br/>
+	默认为0（即使存在剩余空间也不放大）.定义项目的放大比例。</h4>
+	<i>默认情况下不瓜分剩余空间，在这里我设置了justify-content: space-between;所以所谓的剩余空间用作了等距间隔。</i>
+	<div id='box3' class='box3'>
+		<span class='od1'style="font-size:12px;">0(默认)</span>
+		<span class='od2'style="font-size:12px;">0(默认)</span>
+		<span class='od3'style="font-size:12px;">0(默认)</span>
+		<span class='od4'style="font-size:12px;">0(默认)</span>
+	</div>
+	<i>flex-grow都设置为1时，等分剩余空间</i>
+	<div id='box4' class='box3'>
+		<span class='od1'>1</span>
+		<span class='od2'>1</span>
+		<span class='od3'>1</span>
+		<span class='od4'>1</span>
+	</div>
+	<i>一个项目flex-grow设置为2时，其他都设置为1，前者占据的剩余空间比其他项多一倍。</i>
+	<div id='box5' class='box3'>
+		<span class='od1'>2</span>
+		<span class='od2'>1</span>
+		<span class='od3'>1</span>
+		<span class='od4'>1</span>
+	</div>
+	<i>一个项目flex-grow设置为1时，其他都设置为默认，它将占据全部的剩余空间。</i>
+	<div id='box11' class='box3'>
+		<span class='od1'>2</span>
+		<span class='od2'>1</span>
+		<span class='od3'>1</span>
+		<span class='od4'>1</span>
+	</div>
+</div>
+<div>
+	<h4>3.flex-shrink:number;<br/>
+	该属性定义了项目的缩小比例，默认为1（即若是空间不足，该项目缩小）。</h4>
+	<i>项目均等比例缩小</i>
+	<div id='box6' class='box6'>
+		<span class='od1'>1</span>
+		<span class='od2'>2</span>
+		<span class='od3'>3</span>
+		<span class='od4'>4</span>
+		<span class='od5'>5</span>
+		<span class='od6'>6</span>
+		<span class='od7'>7</span>
+		<span class='od8'>8</span>
+	</div>
+	<i>将第2块设置了flex-grow:4;其他默认，第2块再次缩小了。给第5块设置了flex-grow:0;即使空间不足它也不缩小。</i>
+	<div id='box7' class='box6'>
+		<span class='od1'>1</span>
+		<span class='od2'>2</span>
+		<span class='od3'>3</span>
+		<span class='od4'>4</span>
+		<span class='od5'>5</span>
+		<span class='od6'>6</span>
+		<span class='od7'>7</span>
+		<span class='od8'>8</span>
+	</div>
+</div>
+<div>
+	<h4>4.flex-basis:;length(如200px）|auto;
+		<br/>该属性在分配多余空间之前，<u style="color:red;">项目占据的主轴空间</u>若设置数值就是有固定空间。默认值为auto，即项目的本来大小。</h4>	
+	<div  class='box3'>
+		<span class='od1'>1</span>
+		<span class='od2'>2</span>
+		<span class='od3'>3</span>
+		<span class='od4'>4</span>
+		<span class='od5'>5</span>
+		<span class='od6'>6</span>
+		<span class='od7'>7</span>
+		<span class='od8'>8</span>
+	</div>
+	<i>给2块设置flex-basis:200px;后</i>
+	<div id='box8' class='box3'>
+		<span class='od1'>1</span>
+		<span class='od2'>2</span>
+		<span class='od3'>3</span>
+		<span class='od4'>4</span>
+		<span class='od5'>5</span>
+		<span class='od6'>6</span>
+		<span class='od7'>7</span>
+		<span class='od8'>8</span>
+	</div>
+</div>
+<div>
+	<h4>5.flex属性是flex-grow,flex-shrink,flex-basis的简写，默认值0 1 auto.<br/>
+	快捷值auto(1 1 auto)、none(0 0 auto).建议是使用这个属性而不是单独写三个分离的属性，因为浏览器会推算相关值。</h4>
+	<i>设置为1 1 auto后</i>
+	<div id='box9' class='box3'>
+		<span class='od1'>1</span>
+		<span class='od2'>2</span>
+		<span class='od3'>3</span>
+		<span class='od4'>4</span>
+		<span class='od5'>5</span>
+		<span class='od6'>6</span>
+		<span class='od7'>7</span>
+		<span class='od8'>8</span>
+	</div>
+</div>
+<div>
+	<h4>6.align-self: auto | flex-start | flex-end | center | baseline | stretch;
+<br/>align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。</h4>
+<div id='box10' class='box3'>
+		<span class='od1'>1</span>
+		<span class='od2'>2</span>
+		<span class='od3'>3</span>
+		<span class='od4'>4</span>
+		<span class='od5'>5</span>
+		<span class='od6'>6</span>
+		<span class='od7'>7</span>
+		<span class='od8'>8</span>
+	</div>
+
+</div>
+	</div>
+</body>
+</html>
